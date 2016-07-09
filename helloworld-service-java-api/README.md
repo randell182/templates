@@ -27,9 +27,9 @@ Kudos to https://github.com/JoseVte/template-api-rest-java-playframework#master
 
 ### Prerequisities
 
-Docker  - www.docker.com
-activator - https://www.lightbend.com/community/core-tools/activator-and-sbt
-Java8 
+* Docker  - www.docker.com
+* activator - https://www.lightbend.com/community/core-tools/activator-and-sbt
+* Java8 
 
 
 Development Setup
@@ -96,8 +96,8 @@ http://192.168.99.101:8080
 
 References 
 ==========
-https://github.com/JoseVte/template-api-rest-java-playframework#master
-http://blog.jaceklaskowski.pl/2015/07/24/docker-your-scala-web-application-play-framework.html
+* https://github.com/JoseVte/template-api-rest-java-playframework#master
+* http://blog.jaceklaskowski.pl/2015/07/24/docker-your-scala-web-application-play-framework.html
 
 
 
