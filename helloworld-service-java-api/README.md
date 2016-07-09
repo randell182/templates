@@ -91,8 +91,9 @@ docker-machine ip default
 
 Access via browser
 
-http://192.168.99.101:8080
-
+````
+open http://192.168.99.101:8080
+````
 
 References 
 ==========
