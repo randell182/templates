@@ -75,5 +75,14 @@ References
 * https://spring.io/blog/2015/07/14/microservices-with-spring
 
 
+TODO
+====
+
+Add self documenting API using Spring Rest Docs
+* https://www.tothepoint.company/blog/spring-rest-doc/
+* http://projects.spring.io/spring-restdocs
+
+
+
 
 
