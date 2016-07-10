@@ -16,13 +16,13 @@ This is a sample microservice using Node.js
 Setup the project (install dependencies, assuming `npm` is installed):
 
 ```
-    $ npm install
+$ npm install
 ```
 
 Start the server:
 
 ```
-    $ npm start
+$ npm start
 ```
 
 Or, for a better development experience, use `nodemon` (so that the server is automatically restarted whenever file changes are detected).
@@ -30,7 +30,7 @@ Or, for a better development experience, use `nodemon` (so that the server is au
 Run api
 
 ```
-	$ curl -v http://localhost:3000/v1/sayHello/john
+$ curl -v http://localhost:3000/v1/sayHello/john
 ```
 
 
@@ -63,7 +63,7 @@ Invoke Service
 
 
 ```
-	$ curl -v http://192.168.99.101:3000/v1/sayHello/john
+$ curl -v http://192.168.99.101:3000/v1/sayHello/john
 ```
 
 
