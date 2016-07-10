@@ -23,7 +23,7 @@ def readFromCSVFile(sc, filename):
 
 def readFromHive(hc,tableName):
     ds = latestPartition("{tableName}".format(tableName=tableName),hc)
-    return hc.sql("select * {tableName}  where {ds}  group by primary_heading_code, is_paid  ".format(tableName=tableName,ds=ds)) \
+    return hc.sql("select * {tableName}  where {ds} ".format(tableName=tableName,ds=ds)) \
         .map(lambda row: dict(row.asDict()))
 
 def main(sc,ssc,hc):
