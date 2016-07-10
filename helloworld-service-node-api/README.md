@@ -55,7 +55,7 @@ $ docker run -it --rm  -p 3000:3000 --name helloworld-service-node-api-dev hello
 Determine Docker machine IP
 
 ```` 
-docker-machine ip default
+$ docker-machine ip default
 192.168.99.101
 ````
 
