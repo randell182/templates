@@ -1,6 +1,7 @@
-package com.helloworld;
+package com.helloworld.controllers;
 
 
+import com.helloworld.App;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -28,10 +29,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringApplicationConfiguration(classes = App.class)
 @WebAppConfiguration
 /**
- * AppTest is test class aimed at testing App and producting the RestDocumentation
+ * HelloWorldControllerTest is test class aimed at testing App and producing the rest documentation
  * Created by randell on 7/10/16.
  */
-public class AppTest {
+public class HelloWorldControllerTest {
 
     @Rule
     public final RestDocumentation restDocumentation = new RestDocumentation("target/generated-snippets");
@@ -63,7 +64,7 @@ public class AppTest {
         );
 
         this.mockMvc.perform(
-                get("/").accept(MediaType.APPLICATION_JSON)
+                get("/helloworld").accept(MediaType.APPLICATION_JSON)
         ).andExpect(status().isOk());
     }
 
