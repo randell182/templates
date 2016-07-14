@@ -4,3 +4,9 @@ spring:
     name: helloworld-service
   thymeleaf.cache: false
   main.show-banner: false
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true

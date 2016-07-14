@@ -21,10 +21,10 @@ Development Setup
 Run using mvn
 
 ```
-mvn exec:java -Dexec.mainClass="com.helloworld.App"
+mvn exec:java -Dexec.mainClass="com.helloworld.HelloWorldServiceApp"
 ```
 
-or Run "com.helloworld.App" from your IDE
+or Run "com.helloworld.HelloWorldServiceApp" from your IDE
 
 
 Docker Deployment
@@ -69,6 +69,37 @@ open http://192.168.99.101:8080/helloworld
 ````
 
 
+Service Discovery
+=================
+
+This service is configured to auto register with a eureka service discovery server. Use sample helloworld-eureka project. When successfully registered with Eureka server, logs will show
+
+````
+2016-07-13 23:32:29.498  INFO 3260 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2016-07-13 23:32:29.503  INFO 3260 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2016-07-13 23:32:29.504  INFO 3260 --- [pool-5-thread-1] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2016-07-13 23:32:29.556  INFO 3260 --- [pool-4-thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HELLOWORLD-SERVICE/sakura.socal.rr.com - Re-registering apps/HELLOWORLD-SERVICE
+2016-07-13 23:32:29.556  INFO 3260 --- [pool-4-thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HELLOWORLD-SERVICE/sakura.socal.rr.com: registering service...
+2016-07-13 23:32:29.592  INFO 3260 --- [pool-4-thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HELLOWORLD-SERVICE/sakura.socal.rr.com - registration status: 204
+2016-07-13 23:32:39.499  INFO 3260 --- [scoveryClient-2] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HELLOWORLD-SERVICE/sakura.socal.rr.com - retransmit instance info with status UP
+2016-07-13 23:32:39.499  INFO 3260 --- [scoveryClient-2] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HELLOWORLD-SERVICE/sakura.socal.rr.com: registering service...
+2016-07-13 23:32:39.507  INFO 3260 --- [scoveryClient-2] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_HELLOWORLD-SERVICE/sakura.socal.rr.com - registration status: 204
+````
+
+Also, Eureka server on http://localhost:8761/  will show it's up
+
+````
+Instances currently registered with Eureka
+
+Application	AMIs	Availability Zones	Status
+HELLOWORLD-SERVICE	n/a (1)	(1)	UP (1) - sakura.socal.rr.com
+````
+
+
+
+
+
+
 Documentation
 =============
 
@@ -81,6 +112,7 @@ References
 * https://spring.io/blog/2015/07/14/microservices-with-spring
 * https://www.tothepoint.company/blog/spring-rest-doc/
 * http://projects.spring.io/spring-restdocs
+* http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html
 
 
 

@@ -1,7 +1,7 @@
 package com.helloworld.controllers;
 
 
-import com.helloworld.App;
+import com.helloworld.HelloWorldServiceApp;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -26,7 +26,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = App.class)
+@SpringApplicationConfiguration(classes = HelloWorldServiceApp.class)
 @WebAppConfiguration
 /**
  * HelloWorldControllerTest is test class aimed at testing App and producing the rest documentation
