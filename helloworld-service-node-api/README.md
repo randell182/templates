@@ -73,8 +73,15 @@ $ curl -v http://192.168.99.101:3000/v1/sayHello/john
 * Docker 
 * Node.js
 
+# Service Discovery
 
-## TODO
+This sample service registers itself for discovery to the Eureka server configured for localhost:8761.
 
+
+# References
+* https://www.npmjs.com/package/eureka-js-client
+
+# TODO
 Refactor to self document the API - https://www.npmjs.com/package/restly
+
 

@@ -50,9 +50,8 @@ class HelloWorldClient implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
 
-        Map response  =
-                this.restTemplate.getForObject("http://helloworld-service/helloworld",Map.class);
-        log.info(response.get("msg"));
+        log.info(this.restTemplate.getForObject("http://helloworld-service/helloworld",Map.class).get("msg"));
+        log.info(this.restTemplate.getForObject("http://helloworld-service-node-js/v1/sayHello/John",Map.class).get("msg"));
     }
 
 }
